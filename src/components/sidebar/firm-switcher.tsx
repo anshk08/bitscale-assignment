@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronsUpDown, Loader2 } from "lucide-react";
+import Image from "next/image";
 
 export function FirmSwitcher() {
   const selectedFirm = useGlobalStore((state) => state.selectedFirm);
@@ -32,9 +33,25 @@ export function FirmSwitcher() {
         <DropdownMenuTrigger asChild>
           <button className="hover:bg-accent flex h-full w-full items-center justify-between px-4 transition-colors outline-none">
             <div className="flex items-center gap-3 overflow-hidden">
+              <div className="flex items-center justify-center">
+                <Image
+                  src="https://i.pravatar.cc/40?u=Rachel Green"
+                  alt={`${currentFirm.name} logo`}
+                  width={24}
+                  height={24}
+                  className="rounded-full object-cover border-2 border-white"
+                />
+
+                <Image
+                  src="https://i.pravatar.cc/40?u=Alex Thompson"
+                  alt={`${currentFirm.name} logo`}
+                  width={24}
+                  height={24}
+                  className="-ml-3 rounded-full object-cover border-2 border-white"
+                />
+              </div>
               <span className="truncate font-medium">{currentFirm.name}</span>
             </div>
-
             <ChevronsUpDown className="h-4 w-4 shrink-0 text-muted-foreground" />
           </button>
         </DropdownMenuTrigger>

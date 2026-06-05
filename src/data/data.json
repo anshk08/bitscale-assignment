@@ -9,70 +9,90 @@
           "name": "Workbook - GTM Strategy 2026",
           "editedBy": "John Smith",
           "lastEdited": "2026-06-05T09:15:00Z",
-          "starred": true
+          "starred": true,
+          "type": "workbook",
+          "avatar": "https://i.pravatar.cc/40?u=John Smith"
         },
         {
           "id": "1",
           "name": "LinkedIn Outreach",
           "editedBy": "Sarah Johnson",
           "lastEdited": "2026-06-04T14:20:00Z",
-          "starred": false
+          "starred": false,
+          "type": "linkedin",
+          "avatar": "https://i.pravatar.cc/40?u=Sarah Johnson"
         },
         {
           "id": "2",
           "name": "Sales Nav Prospects",
           "editedBy": "Michael Brown",
           "lastEdited": "2026-06-03T11:45:00Z",
-          "starred": true
+          "starred": true,
+          "type": "sales-nav",
+          "avatar": "https://i.pravatar.cc/40?u=Michael Brown"
         },
         {
           "id": "3",
           "name": "Find Company",
           "editedBy": "Emily Davis",
           "lastEdited": "2026-06-02T16:10:00Z",
-          "starred": false
+          "starred": false,
+          "type": "find-company",
+          "avatar": "https://i.pravatar.cc/40?u=Emily Davis"
         },
         {
           "id": "4",
           "name": "Import CSV - Leads",
           "editedBy": "David Wilson",
           "lastEdited": "2026-06-01T10:30:00Z",
-          "starred": true
+          "starred": true,
+          "type": "csv",
+          "avatar": "https://i.pravatar.cc/40?u=David Wilson"
         },
         {
           "id": "5",
           "name": "Find People",
           "editedBy": "Lisa Anderson",
           "lastEdited": "2026-05-31T13:50:00Z",
-          "starred": false
+          "starred": false,
+          "type": "find-people",
+          "avatar": "https://i.pravatar.cc/40?u=Lisa Anderson"
         },
         {
           "id": "6",
           "name": "Google Maps Enrichment",
           "editedBy": "Robert Taylor",
           "lastEdited": "2026-05-30T08:25:00Z",
-          "starred": false
+          "starred": false,
+          "type": "maps",
+          "avatar": "https://i.pravatar.cc/40?u=Robert Taylor"
         },
         {
           "id": "7",
           "name": "Google Search Results",
           "editedBy": "Jennifer White",
           "lastEdited": "2026-05-29T15:40:00Z",
-          "starred": true
+          "starred": true,
+          "type": "search",
+          "avatar": "https://i.pravatar.cc/40?u=Jennifer White"
         },
         {
           "id": "8",
           "name": "Factors Scoring",
           "editedBy": "James Martinez",
           "lastEdited": "2026-05-28T12:05:00Z",
-          "starred": false
+          "starred": false,
+          "type": "factors",
+          "avatar": "https://i.pravatar.cc/40?u=James Martinez"
         },
         {
           "id": "9",
           "name": "Hubspot List - Q2 Targets",
           "editedBy": "Amanda Garcia",
           "lastEdited": "2026-05-27T17:20:00Z",
-          "starred": true
+          "starred": true,
+          "type": "hubspot",
+          "avatar": "https://i.pravatar.cc/40?u=Amanda Garcia"
         }
       ]
     },
@@ -85,70 +105,90 @@
           "name": "Workbook - SA Pipeline Overview",
           "editedBy": "Alex Thompson",
           "lastEdited": "2026-06-05T08:10:00Z",
-          "starred": true
+          "starred": true,
+          "type": "workbook",
+          "avatar": "https://i.pravatar.cc/40?u=Alex Thompson"
         },
         {
           "id": "11",
           "name": "LinkedIn Campaigns",
           "editedBy": "Rachel Green",
           "lastEdited": "2026-06-04T13:35:00Z",
-          "starred": true
+          "starred": true,
+          "type": "linkedin",
+          "avatar": "https://i.pravatar.cc/40?u=Rachel Green"
         },
         {
           "id": "12",
           "name": "Sales Nav - Enterprise Accounts",
           "editedBy": "Chris Walker",
           "lastEdited": "2026-06-03T10:15:00Z",
-          "starred": false
+          "starred": false,
+          "type": "sales-nav",
+          "avatar": "https://i.pravatar.cc/40?u=Chris Walker"
         },
         {
           "id": "13",
           "name": "Find Company - APAC",
           "editedBy": "Sophia Hall",
           "lastEdited": "2026-06-02T14:55:00Z",
-          "starred": true
+          "starred": true,
+          "type": "find-company",
+          "avatar": "https://i.pravatar.cc/40?u=Sophia Hall"
         },
         {
           "id": "14",
           "name": "Import CSV - CRM Sync",
           "editedBy": "Daniel Allen",
           "lastEdited": "2026-06-01T09:20:00Z",
-          "starred": false
+          "starred": false,
+          "type": "csv",
+          "avatar": "https://i.pravatar.cc/40?u=Daniel Allen"
         },
         {
           "id": "15",
           "name": "Find People - Decision Makers",
           "editedBy": "Olivia Young",
           "lastEdited": "2026-05-31T16:45:00Z",
-          "starred": true
+          "starred": true,
+          "type": "find-people",
+          "avatar": "https://i.pravatar.cc/40?u=Olivia Young"
         },
         {
           "id": "16",
           "name": "Google Maps - Territory Mapping",
           "editedBy": "Matthew King",
           "lastEdited": "2026-05-30T11:30:00Z",
-          "starred": false
+          "starred": false,
+          "type": "maps",
+          "avatar": "https://i.pravatar.cc/40?u=Matthew King"
         },
         {
           "id": "17",
           "name": "Google Search - Competitor Intel",
           "editedBy": "Grace Scott",
           "lastEdited": "2026-05-29T15:05:00Z",
-          "starred": true
+          "starred": true,
+          "type": "search",
+          "avatar": "https://i.pravatar.cc/40?u=Grace Scott"
         },
         {
           "id": "18",
           "name": "Factors - Intent Signals",
           "editedBy": "Andrew Baker",
           "lastEdited": "2026-05-28T12:40:00Z",
-          "starred": false
+          "starred": false,
+          "type": "factors",
+          "avatar": "https://i.pravatar.cc/40?u=Andrew Baker"
         },
         {
           "id": "19",
           "name": "Hubspot List - Nurture Sequence",
           "editedBy": "Natalie Adams",
           "lastEdited": "2026-05-27T18:15:00Z",
-          "starred": true
+          "starred": true,
+          "type": "hubspot",
+          "avatar": "https://i.pravatar.cc/40?u=Natalie Adams"
         }
       ]
     }

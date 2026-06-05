@@ -4,4 +4,6 @@ export type Grid = {
   editedBy: string;
   lastEdited: string;
   starred: boolean;
+  type?: string;
+  avatar?: string;
 };

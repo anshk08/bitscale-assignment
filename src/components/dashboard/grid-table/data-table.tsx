@@ -33,9 +33,7 @@ export function DataTable<TData, TValue>({
     columns,
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
-    state: {
-      sorting,
-    },
+    state: { sorting },
     getCoreRowModel: getCoreRowModel(),
   });
 
@@ -66,6 +64,7 @@ export function DataTable<TData, TValue>({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
+                className="hover:bg-muted/40"
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>

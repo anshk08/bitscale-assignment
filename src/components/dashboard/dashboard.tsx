@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { Loader2, Plus, School, Search, User } from "lucide-react";
 
 import data from "@/data/data.json";
@@ -13,6 +13,9 @@ import { DataTable } from "./grid-table/data-table";
 import { columns } from "./grid-table/columns";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
+
+const deletedIds = new Set<string>();
+const starredOverrides: Record<string, boolean> = {};
 
 export function Dashboard() {
   const selectedFirm = useGlobalStore((state) => state.selectedFirm);
@@ -30,7 +33,18 @@ export function Dashboard() {
       await new Promise((resolve) => setTimeout(resolve, 2000));
       const firm = data.firms.find((firm) => firm.id === selectedFirm);
       if (!cancelled) {
-        setGrids(firm?.grids ?? []);
+        const freshGrids = (firm?.grids ?? [])
+          .filter((g) => !deletedIds.has(g.id))
+          .map((g) => ({
+            ...g,
+            starred: Object.prototype.hasOwnProperty.call(
+              starredOverrides,
+              g.id,
+            )
+              ? starredOverrides[g.id]
+              : g.starred,
+          }));
+        setGrids(freshGrids);
         setLoading(false);
       }
     };
@@ -40,6 +54,27 @@ export function Dashboard() {
       cancelled = true;
     };
   }, [selectedFirm]);
+
+  const toggleStar = useCallback((id: string) => {
+    setGrids((prev) => {
+      const updated = prev.map((g) =>
+        g.id === id ? { ...g, starred: !g.starred } : g,
+      );
+      const toggled = updated.find((g) => g.id === id);
+      if (toggled) starredOverrides[id] = toggled.starred;
+      return updated;
+    });
+  }, []);
+
+  const deleteGrid = useCallback((id: string) => {
+    deletedIds.add(id);
+    setGrids((prev) => prev.filter((g) => g.id !== id));
+  }, []);
+
+  const cols = useMemo(
+    () => columns(toggleStar, deleteGrid),
+    [toggleStar, deleteGrid],
+  );
 
   if (loading) {
     return (
@@ -104,18 +139,18 @@ export function Dashboard() {
           <div className="relative">
             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-3.5 text-muted-foreground" />
             <Input
-              placeholder="Search grids..."
+              placeholder="Search grids and workbooks..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="pl-8 h-8 w-64 text-sm"
+              className="pl-8 h-8 w-80 text-sm"
             />
           </div>
         </div>
         <TabsContent value="my-grids" className="mt-2">
-          <DataTable columns={columns} data={filteredGrids} />
+          <DataTable columns={cols} data={filteredGrids} />
         </TabsContent>
         <TabsContent value="starred" className="mt-2">
-          <DataTable columns={columns} data={starredGrids} />
+          <DataTable columns={cols} data={starredGrids} />
         </TabsContent>
       </Tabs>
     </div>
