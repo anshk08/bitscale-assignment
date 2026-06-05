@@ -18,8 +18,7 @@ const deletedIds = new Set<string>();
 const starredOverrides: Record<string, boolean> = {};
 
 export function Dashboard() {
-  const selectedFirm = useGlobalStore((state) => state.selectedFirm);
-
+  const { setFindPeopleSheetOpen, selectedFirm } = useGlobalStore();
   const [loading, setLoading] = useState(true);
   const [grids, setGrids] = useState<Grid[]>([]);
   const [search, setSearch] = useState("");
@@ -102,18 +101,20 @@ export function Dashboard() {
           <Button
             variant="outline"
             className="flex items-center justify-center gap-2"
+            disabled
           >
             <School className="size-4 text-green-600" />
             Find Companies
           </Button>
           <Button
             variant="outline"
-            className="flex items-center justify-center gap-2"
+            className="flex items-center justify-center gap-2 cursor-pointer"
+            onClick={() => setFindPeopleSheetOpen(true)}
           >
             <User className="size-4 text-purple-600" />
             Find People
           </Button>
-          <Button className="flex items-center justify-center gap-2">
+          <Button className="flex items-center justify-center gap-2" disabled>
             <Plus className="size-4" />
             New Grid
           </Button>
