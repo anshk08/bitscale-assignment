@@ -6,6 +6,7 @@ import {
   SidebarFooter,
   SidebarHeader,
 } from "@/components/ui/sidebar";
+import { FirmSwitcher } from "./firm-switcher";
 import {
   Book,
   BookOpen,
@@ -60,6 +61,8 @@ export function AppSidebar() {
           </h1>
         </div>
       </SidebarHeader>
+
+      <FirmSwitcher />
 
       <SidebarContent>
         <NavMain groups={data.navGroups} />

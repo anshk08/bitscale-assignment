@@ -1,16 +1,9 @@
-import Image from "next/image";
+import { Dashboard } from "@/components/dashboard/dashboard";
 
-export default function Dashboard() {
+export default function DashboardPage() {
   return (
-    <div className="flex h-full items-center justify-center">
-      <Image
-        src="/undraw_under-construction_c2y1.svg"
-        alt="Under Construction"
-        width={400}
-        height={400}
-        priority
-        className="shrink-0"
-      />
+    <div className="flex h-full w-full p-4">
+      <Dashboard />
     </div>
   );
 }

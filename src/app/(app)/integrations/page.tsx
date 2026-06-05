@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Integrations() {
+export default function IntegrationsPage() {
   return (
     <div className="flex h-full items-center justify-center">
       <Image
