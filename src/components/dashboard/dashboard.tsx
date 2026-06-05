@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, Plus, School, User } from "lucide-react";
 
 import data from "@/data/data.json";
 import { useGlobalStore } from "@/store/global-store";
 import { Grid } from "@/types/global-type";
+import { Button } from "../ui/button";
+import { Latest } from "./latest";
+import { ProductDemo } from "./product-demo";
 
 export function Dashboard() {
   const selectedFirm = useGlobalStore((state) => state.selectedFirm);
@@ -45,7 +48,39 @@ export function Dashboard() {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col gap-4">
+      <div className="flex flex-col gap-2 md:flex-row items-start md:items-center justify-between">
+        <div className="flex flex-col">
+          <h1 className="text-lg font-semibold">Welcome Back, Yash!</h1>
+          <p className="text-muted-foreground">
+            Here&apos;s your daily scoop on Bitscale!
+          </p>
+        </div>
+        <div className="flex items-center justify-start md:justify-center gap-2 flex-wrap">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center gap-2"
+          >
+            <School className="size-4 text-green-600" />
+            Find Companies
+          </Button>
+          <Button
+            variant="outline"
+            className="flex items-center justify-center gap-2"
+          >
+            <User className="size-4 text-purple-600" />
+            Find People
+          </Button>
+          <Button className="flex items-center justify-center gap-2">
+            <Plus className="size-4" />
+            New Grid
+          </Button>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+        <Latest />
+        <ProductDemo />
+      </div>
       <div className="space-y-4">
         {grids.map((grid) => (
           <div key={grid.name} className="rounded-lg border p-4">
