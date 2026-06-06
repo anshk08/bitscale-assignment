@@ -29,7 +29,7 @@ export function Dashboard() {
     const loadGrids = async () => {
       setLoading(true);
       setSearch("");
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       const firm = data.firms.find((firm) => firm.id === selectedFirm);
       if (!cancelled) {
         const freshGrids = (firm?.grids ?? [])
