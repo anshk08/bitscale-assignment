@@ -35,7 +35,7 @@ export function FirmSwitcher() {
             <div className="flex items-center gap-3 overflow-hidden">
               <div className="flex items-center justify-center">
                 <Image
-                  src="https://i.pravatar.cc/40?u=Rachel Green"
+                  src={currentFirm.images[0]}
                   alt={`${currentFirm.name} logo`}
                   width={24}
                   height={24}
@@ -43,7 +43,7 @@ export function FirmSwitcher() {
                 />
 
                 <Image
-                  src="https://i.pravatar.cc/40?u=Alex Thompson"
+                  src={currentFirm.images[1]}
                   alt={`${currentFirm.name} logo`}
                   width={24}
                   height={24}

@@ -3,6 +3,10 @@
     {
       "id": 0,
       "name": "GTM Spaces",
+      "images": [
+        "https://i.pravatar.cc/40?u=Rachel Green",
+        "https://i.pravatar.cc/40?u=Emily Davis"
+      ],
       "grids": [
         {
           "id": "0",
@@ -99,6 +103,10 @@
     {
       "id": 1,
       "name": "SA Group",
+      "images": [
+        "https://i.pravatar.cc/40?u=Alex Thompson",
+        "https://i.pravatar.cc/40?u=Chris Walker"
+      ],
       "grids": [
         {
           "id": "10",

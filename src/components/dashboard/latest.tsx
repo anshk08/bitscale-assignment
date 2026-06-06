@@ -55,7 +55,7 @@ function getYouTubeEmbedUrl(url: string): string {
     const parsed = new URL(url);
     const videoId =
       parsed.searchParams.get("v") || parsed.pathname.split("/").pop();
-    return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    return `https://www.youtube.com/embed/${videoId}`;
   } catch {
     return url;
   }
